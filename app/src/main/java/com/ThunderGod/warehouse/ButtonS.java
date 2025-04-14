@@ -1,11 +1,10 @@
 package com.ThunderGod.warehouse;
 
-import android.widget.LinearLayout;
-import android.app.Activity;
 import android.content.Context;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.MotionEvent;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class ButtonS {

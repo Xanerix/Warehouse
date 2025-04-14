@@ -1,23 +1,18 @@
 package com.ThunderGod.warehouse;
 
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.ViewSwitcher;
-import android.view.animation.ScaleAnimation;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.RotateAnimation;
-import android.view.ViewTreeObserver;
 import android.animation.Animator;
-import android.view.ViewAnimationUtils;
-import android.widget.Toast;
-import android.content.Context;
-import android.animation.ObjectAnimator;
 import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-
-import com.ThunderGod.warehouse.*;
+import android.view.View;
+import android.view.ViewAnimationUtils;
+import android.view.ViewTreeObserver;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.LinearLayout;
 
 public class local {
     //by ThunderGod
@@ -100,21 +95,15 @@ public class local {
         return UIShrink(view, type, In, out, In, out, 0.5f, 0.5f, time);
     }
 
-    ;
-
     //水平
     public static TranslateAnimation UILevel(View view, String type, int In, int out, int time) {
         return UIMove(view, type, In, out, 0, 0, time);
     }
 
-    ;
-
     //垂直
     public static TranslateAnimation UIPlumb(View view, final int In, int out, int time) {
         return UIMove(view, "TP", 0, 0, In, out, time);
     }
-
-    ;
 
     //揭露
     public static ViewTreeObserver.OnGlobalLayoutListener UIReveal(final LinearLayout view, final int x, final int y, final int startRadius, final int endRadius, final int time) {
@@ -138,14 +127,13 @@ public class local {
         ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, Animationmode, value1, value2);
         objectAnimator.setDuration(time);
         objectAnimator.setRepeatCount(frequency);
-        if (repeat == true) {
+        if (repeat) {
             objectAnimator.setRepeatCount(android.animation.ObjectAnimator.INFINITE);
         }
 
-        if (flat == true) {
+        if (flat) {
             objectAnimator.setEvaluator(new ArgbEvaluator());
         }
-        ;
 
         if (mode == "RESTART" | mode == null) {
             objectAnimator.setRepeatMode(android.animation.ValueAnimator.RESTART);
@@ -161,10 +149,10 @@ public class local {
         ObjectAnimator objectAnimator = ObjectAnimator.ofInt(view, Animationmode, value1, value2);
         objectAnimator.setDuration(time);
         objectAnimator.setRepeatCount(frequency);
-        if (repeat == true) {
+        if (repeat) {
             objectAnimator.setRepeatCount(android.animation.ObjectAnimator.INFINITE);
         }
-        if (flat == true) {
+        if (flat) {
             objectAnimator.setEvaluator(new ArgbEvaluator());
         }
         if (mode == "RESTART") {

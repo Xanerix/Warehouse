@@ -1,20 +1,13 @@
 package com.ThunderGod.warehouse;
 
-import android.widget.Toast;
 import android.content.Context;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.view.Gravity;
-import android.widget.PopupWindow;
 import android.os.Handler;
 import android.os.Looper;
-
-import com.ThunderGod.warehouse.UI.UI1;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Queue;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
 import java.util.List;
 
 

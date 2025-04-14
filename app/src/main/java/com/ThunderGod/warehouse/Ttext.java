@@ -1,14 +1,9 @@
 package com.ThunderGod.warehouse;
 
-import android.widget.TextView;
-import android.app.Activity;
-
-import com.ThunderGod.warehouse.*;
-
-import android.view.Gravity;
-import android.view.View;
-import android.widget.LinearLayout;
 import android.content.Context;
+import android.view.Gravity;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class Ttext {
     public static TextView Ttext(Context activity, LinearLayout view, Object text, int size, String color, String gravity, String color2, int radius, int x, int y) {

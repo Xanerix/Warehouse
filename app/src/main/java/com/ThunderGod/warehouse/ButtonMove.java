@@ -1,15 +1,12 @@
 package com.ThunderGod.warehouse;
 
-import com.ThunderGod.warehouse.*;
-
-import android.widget.LinearLayout;
 import android.content.Context;
-import android.widget.PopupWindow;
-import android.view.View;
-import android.content.res.Configuration;
 import android.view.MotionEvent;
-import android.widget.TextView;
+import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +14,7 @@ import java.util.Map;
 public class ButtonMove {
     //public static Context context;
     private static boolean canmovew = false;
-    private static boolean pd = false;
+    private static final boolean pd = false;
     int X;
     int Y;
 
@@ -33,9 +30,9 @@ public class ButtonMove {
         ButtonMove1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (sfyszb == true) {
+                if (sfyszb) {
                     //setClickListener(set,ButtonMove1);
-                    if (pd.get(ButtonMove1) == false) {
+                    if (!pd.get(ButtonMove1)) {
                         pd.put(ButtonMove1, true);
                         local.ObjectAnimatorofInt(buttontext, 300, "textColor", roundRect.hexColor("#000000"), roundRect.hexColor("#9198e5"), false, true, "RESTART", 0);
                         local.UIZoom(buttontext, "TP", 1.1f, 1, 300);
@@ -56,7 +53,7 @@ public class ButtonMove {
             }
         });
 
-        if (a2 == true) {
+        if (a2) {
             //setClickListener(set,ButtonMove1);
             pd.put(ButtonMove1, true);
             buttontext.setTextColor(roundRect.hexColor("#9198e5"));
@@ -116,11 +113,11 @@ public class ButtonMove {
     }
 
     public static int W(Context context) {
-        return (int) (context.getResources().getDisplayMetrics().widthPixels);
+        return context.getResources().getDisplayMetrics().widthPixels;
     }
 
     public static int H(Context context) {
-        return (int) (context.getResources().getDisplayMetrics().heightPixels);
+        return context.getResources().getDisplayMetrics().heightPixels;
     }
 
     private static void setClickListener(final OnClickListener click, LinearLayout v) {

@@ -1,15 +1,10 @@
 package com.ThunderGod.warehouse;
 
-import android.widget.Toast;
-import android.app.Activity;
-
-import com.ThunderGod.warehouse.*;
-
-import android.widget.LinearLayout;
-import android.view.View;
 import android.content.Context;
 import android.view.Gravity;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Toasts {
     public static Toast Toasts(Context context, String text, String g) {

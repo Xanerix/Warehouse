@@ -1,19 +1,16 @@
 package com.ThunderGod.warehouse;
 
-import com.ThunderGod.warehouse.*;
-
-import android.widget.LinearLayout;
-import android.app.Activity;
-import android.widget.PopupWindow;
 import android.content.Context;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 public class TextUI {
     public static PopupWindow TextUIs;
 
     public static void TextUI(Context context, String text, String string) {
-        final LinearLayout TextUI1 = TView.TView(context, null, "CC", 1, (int) (TGmixed.W(context)), (int) (TGmixed.H(context)), "#22000000", 0, "TB", 0,
+        final LinearLayout TextUI1 = TView.TView(context, null, "CC", 1, TGmixed.W(context), TGmixed.H(context), "#22000000", 0, "TB", 0,
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

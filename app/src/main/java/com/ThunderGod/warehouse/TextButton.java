@@ -1,14 +1,10 @@
 package com.ThunderGod.warehouse;
 
-import com.ThunderGod.warehouse.*;
-
-import android.widget.LinearLayout;
 import android.content.Context;
-import android.widget.TextView;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ScrollView;
-import android.app.Activity;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,8 +22,8 @@ public class TextButton {
             @Override
             public void onClick(View view) {
 
-                if (bh == true) {
-                    if (pd1.get(TextButton1) == false) {
+                if (bh) {
+                    if (!pd1.get(TextButton1)) {
                         pd1.put(TextButton1, true);
                         local.ObjectAnimatorofInt(TextButton1text, 300, "textColor", roundRect.hexColor("#000000"), roundRect.hexColor("#9198e5"), false, true, "RESTART", 0);
                         local.UIZoom(TextButton1text, "TP", 1.02f, 1, 300);
@@ -51,7 +47,7 @@ public class TextButton {
         if (view != null) {
             view.addView(TextButton1);
         }
-        if (a2s == true) {
+        if (a2s) {
             pd1.put(TextButton1, true);
             TextButton1text.setTextColor(roundRect.hexColor("#9198e5"));
         } else {

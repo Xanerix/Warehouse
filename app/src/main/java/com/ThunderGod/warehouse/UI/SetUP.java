@@ -1,14 +1,15 @@
 package com.ThunderGod.warehouse.UI;
 
-import com.ThunderGod.warehouse.*;
-
-import android.widget.LinearLayout;
-import android.content.Context;
-import android.view.View;
 import android.app.Activity;
-import android.widget.PopupWindow;
-import android.os.Handler;
-import android.os.Looper;
+import android.view.View;
+import android.widget.LinearLayout;
+
+import com.ThunderGod.warehouse.ModScript;
+import com.ThunderGod.warehouse.Notice;
+import com.ThunderGod.warehouse.TGmixed;
+import com.ThunderGod.warehouse.TView;
+import com.ThunderGod.warehouse.TextButton;
+import com.ThunderGod.warehouse.TextUI;
 
 public class SetUP {
     public static boolean setup1 = false;
@@ -36,12 +37,12 @@ public class SetUP {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (setup1 == false) {
+                        if (!setup1) {
                             setup1 = true;
                             ModScript.ModScript(context);
                             //测试1(context);
                             Notice.Notice(context, "ModScript:true");
-                        } else if (setup1 == true) {
+                        } else if (setup1) {
                             setup1 = false;
                             //cs1.dismiss();
                             ModScript.ModScriptUI.dismiss();

@@ -1,8 +1,7 @@
 package com.ThunderGod.warehouse;
 
-import android.graphics.drawable.GradientDrawable;
 import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable.Orientation;
+import android.graphics.drawable.GradientDrawable;
 
 public class roundRect {
 
@@ -29,7 +28,7 @@ public class roundRect {
 
         if (!isArray(arr)) {
             // 转换为Integer后再转为int
-            Integer intValue = (arr instanceof Integer) ? (Integer)arr : 0;
+            Integer intValue = (arr instanceof Integer) ? (Integer) arr : 0;
             arrs = new int[]{intValue, intValue, intValue};
             background.setColors(arrs);
         } else {
@@ -39,7 +38,7 @@ public class roundRect {
         if (!isArray(arr2)) {
             if (arr2 != null) {
                 // 确保arr2可以转换为数字
-                float floatValue = (arr2 instanceof Number) ? ((Number)arr2).floatValue() : 0f;
+                float floatValue = (arr2 instanceof Number) ? ((Number) arr2).floatValue() : 0f;
                 arrs2 = new float[]{floatValue, floatValue, floatValue, floatValue, floatValue, floatValue, floatValue, floatValue};
                 background.setCornerRadii(arrs2);
             }
@@ -67,11 +66,11 @@ public class roundRect {
         }
 
         // 正确比较对象与整数
-        if (s == null || (s instanceof Integer && ((Integer)s) == 0)) {
+        if (s == null || (s instanceof Integer && ((Integer) s) == 0)) {
             type = GradientDrawable.LINEAR_GRADIENT;
-        } else if (s instanceof Integer && ((Integer)s) == 1) {
+        } else if (s instanceof Integer && ((Integer) s) == 1) {
             type = GradientDrawable.RADIAL_GRADIENT;
-        } else if (s instanceof Integer && ((Integer)s) == 2) {
+        } else if (s instanceof Integer && ((Integer) s) == 2) {
             type = GradientDrawable.SWEEP_GRADIENT;
         }
 

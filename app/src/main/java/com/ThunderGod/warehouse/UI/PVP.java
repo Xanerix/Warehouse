@@ -1,10 +1,11 @@
 package com.ThunderGod.warehouse.UI;
 
-import com.ThunderGod.warehouse.*;
-
-import android.widget.LinearLayout;
-import android.content.Context;
 import android.app.Activity;
+import android.widget.LinearLayout;
+
+import com.ThunderGod.warehouse.TGmixed;
+import com.ThunderGod.warehouse.TView;
+import com.ThunderGod.warehouse.TextButton;
 
 public class PVP {
     public static boolean pvp1 = false;

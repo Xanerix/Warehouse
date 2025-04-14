@@ -1,9 +1,9 @@
 package com.ThunderGod.warehouse;
 
-import android.widget.PopupWindow;
-import android.widget.LinearLayout;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 
 public class Tpopup {
 

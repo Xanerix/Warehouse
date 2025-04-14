@@ -1,9 +1,11 @@
 package com.ThunderGod.warehouse.UI;
 
-import android.widget.LinearLayout;
 import android.app.Activity;
+import android.widget.LinearLayout;
 
-import com.ThunderGod.warehouse.*;
+import com.ThunderGod.warehouse.TGmixed;
+import com.ThunderGod.warehouse.TView;
+import com.ThunderGod.warehouse.TextButton;
 
 public class World {
     public static boolean world1 = false;

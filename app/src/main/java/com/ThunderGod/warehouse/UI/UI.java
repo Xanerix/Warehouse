@@ -1,16 +1,18 @@
 package com.ThunderGod.warehouse.UI;
 
-import com.ThunderGod.warehouse.*;
-import com.ThunderGod.warehouse.UI.*;
-
-import android.widget.LinearLayout;
+import android.animation.ValueAnimator;
+import android.app.Activity;
 import android.content.Context;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.view.View;
-import android.animation.ValueAnimator;
-import android.view.ContextThemeWrapper;
-import android.app.Activity;
+
+import com.ThunderGod.warehouse.TGmixed;
+import com.ThunderGod.warehouse.TView;
+import com.ThunderGod.warehouse.Tpopup;
+import com.ThunderGod.warehouse.Ttext;
+import com.ThunderGod.warehouse.local;
 
 public class UI {
     public static boolean pvp = false;
@@ -51,19 +53,19 @@ public class UI {
                     public void onClick(View view) {
                         UI1.SGclick(context, PVP.PVPUI(context1));
 
-                        if (pvp == false) {
+                        if (!pvp) {
                             Elevation(TGUI1a, 0, 30);
 
-                            if (move == true) {
+                            if (move) {
                                 Elevation(TGUI1b, 30, 0);
                             }
-                            if (player == true) {
+                            if (player) {
                                 Elevation(TGUI1c, 30, 0);
                             }
-                            if (world == true) {
+                            if (world) {
                                 Elevation(TGUI1d, 30, 0);
                             }
-                            if (setup == true) {
+                            if (setup) {
                                 Elevation(TGUI1e, 30, 0);
                             }
                             pvp = true;
@@ -71,7 +73,7 @@ public class UI {
                             world = false;
                             player = false;
                             setup = false;
-                        } else if (pvp == true) {
+                        } else if (pvp) {
                             Elevation(TGUI1a, 30, 0);
                             UI1.scv.dismiss();
                             pvp = false;
@@ -84,23 +86,23 @@ public class UI {
                     public boolean onLongClick(View view1) {
                         TGUIs.dismiss();
                         TGtext(context, context1);
-                        if (pvp == true) {
+                        if (pvp) {
                             UI1.scv.dismiss();
                             pvp = false;
                         }
-                        if (move == true) {
+                        if (move) {
                             UI1.scv.dismiss();
                             move = false;
                         }
-                        if (world == true) {
+                        if (world) {
                             UI1.scv.dismiss();
                             world = false;
                         }
-                        if (player == true) {
+                        if (player) {
                             UI1.scv.dismiss();
                             player = false;
                         }
-                        if (setup == true) {
+                        if (setup) {
                             UI1.scv.dismiss();
                             setup = false;
                         }
@@ -112,20 +114,20 @@ public class UI {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (move == false) {
+                        if (!move) {
                             UI1.SGclick(context, Move.MoveUI(context1));
                             Elevation(TGUI1b, 0, 30);
 
-                            if (pvp == true) {
+                            if (pvp) {
                                 Elevation(TGUI1a, 30, 0);
                             }
-                            if (player == true) {
+                            if (player) {
                                 Elevation(TGUI1c, 30, 0);
                             }
-                            if (world == true) {
+                            if (world) {
                                 Elevation(TGUI1d, 30, 0);
                             }
-                            if (setup == true) {
+                            if (setup) {
                                 Elevation(TGUI1e, 30, 0);
                             }
                             move = true;
@@ -133,7 +135,7 @@ public class UI {
                             world = false;
                             player = false;
                             setup = false;
-                        } else if (move == true) {
+                        } else if (move) {
                             Elevation(TGUI1b, 30, 0);
                             UI1.scv.dismiss();
                             move = false;
@@ -146,23 +148,23 @@ public class UI {
                     public boolean onLongClick(View view1) {
                         TGUIs.dismiss();
                         TGtext(context, context1);
-                        if (pvp == true) {
+                        if (pvp) {
                             UI1.scv.dismiss();
                             pvp = false;
                         }
-                        if (move == true) {
+                        if (move) {
                             UI1.scv.dismiss();
                             move = false;
                         }
-                        if (world == true) {
+                        if (world) {
                             UI1.scv.dismiss();
                             world = false;
                         }
-                        if (player == true) {
+                        if (player) {
                             UI1.scv.dismiss();
                             player = false;
                         }
-                        if (setup == true) {
+                        if (setup) {
                             UI1.scv.dismiss();
                             setup = false;
                         }
@@ -174,20 +176,20 @@ public class UI {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (player == false) {
+                        if (!player) {
                             UI1.SGclick(context, Player.PlayerUI(context1));
                             Elevation(TGUI1c, 0, 30);
 
-                            if (pvp == true) {
+                            if (pvp) {
                                 Elevation(TGUI1a, 30, 0);
                             }
-                            if (move == true) {
+                            if (move) {
                                 Elevation(TGUI1b, 30, 0);
                             }
-                            if (world == true) {
+                            if (world) {
                                 Elevation(TGUI1d, 30, 0);
                             }
-                            if (setup == true) {
+                            if (setup) {
                                 Elevation(TGUI1e, 30, 0);
                             }
                             player = true;
@@ -195,7 +197,7 @@ public class UI {
                             world = false;
                             move = false;
                             setup = false;
-                        } else if (player == true) {
+                        } else if (player) {
                             Elevation(TGUI1c, 30, 0);
                             UI1.scv.dismiss();
                             player = false;
@@ -208,23 +210,23 @@ public class UI {
                     public boolean onLongClick(View view1) {
                         TGUIs.dismiss();
                         TGtext(context, context1);
-                        if (pvp == true) {
+                        if (pvp) {
                             UI1.scv.dismiss();
                             pvp = false;
                         }
-                        if (move == true) {
+                        if (move) {
                             UI1.scv.dismiss();
                             move = false;
                         }
-                        if (world == true) {
+                        if (world) {
                             UI1.scv.dismiss();
                             world = false;
                         }
-                        if (player == true) {
+                        if (player) {
                             UI1.scv.dismiss();
                             setup = false;
                         }
-                        if (setup == true) {
+                        if (setup) {
                             UI1.scv.dismiss();
                             setup = false;
                         }
@@ -236,20 +238,20 @@ public class UI {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (world == false) {
+                        if (!world) {
                             UI1.SGclick(context, World.WorldUI(context1));
                             Elevation(TGUI1d, 0, 30);
 
-                            if (pvp == true) {
+                            if (pvp) {
                                 Elevation(TGUI1a, 30, 0);
                             }
-                            if (move == true) {
+                            if (move) {
                                 Elevation(TGUI1b, 30, 0);
                             }
-                            if (player == true) {
+                            if (player) {
                                 Elevation(TGUI1c, 30, 0);
                             }
-                            if (setup == true) {
+                            if (setup) {
                                 Elevation(TGUI1e, 30, 0);
                             }
                             world = true;
@@ -257,7 +259,7 @@ public class UI {
                             pvp = false;
                             move = false;
                             setup = false;
-                        } else if (world == true) {
+                        } else if (world) {
                             Elevation(TGUI1d, 30, 0);
                             UI1.scv.dismiss();
                             world = false;
@@ -270,23 +272,23 @@ public class UI {
                     public boolean onLongClick(View view1) {
                         TGUIs.dismiss();
                         TGtext(context, context1);
-                        if (pvp == true) {
+                        if (pvp) {
                             UI1.scv.dismiss();
                             pvp = false;
                         }
-                        if (move == true) {
+                        if (move) {
                             UI1.scv.dismiss();
                             move = false;
                         }
-                        if (world == true) {
+                        if (world) {
                             UI1.scv.dismiss();
                             world = false;
                         }
-                        if (player == true) {
+                        if (player) {
                             UI1.scv.dismiss();
                             player = false;
                         }
-                        if (setup == true) {
+                        if (setup) {
                             UI1.scv.dismiss();
                             setup = false;
                         }
@@ -299,19 +301,19 @@ public class UI {
                     @Override
                     public void onClick(View view) {
 
-                        if (setup == false) {
+                        if (!setup) {
                             Elevation(TGUI1e, 0, 30);
                             UI1.SGclick(context, SetUP.SetUPUI(context1));
-                            if (pvp == true) {
+                            if (pvp) {
                                 Elevation(TGUI1a, 30, 0);
                             }
-                            if (move == true) {
+                            if (move) {
                                 Elevation(TGUI1b, 30, 0);
                             }
-                            if (player == true) {
+                            if (player) {
                                 Elevation(TGUI1c, 30, 0);
                             }
-                            if (world == true) {
+                            if (world) {
                                 Elevation(TGUI1d, 30, 0);
                             }
                             setup = true;
@@ -319,7 +321,7 @@ public class UI {
                             player = false;
                             pvp = false;
                             move = false;
-                        } else if (setup == true) {
+                        } else if (setup) {
                             Elevation(TGUI1e, 30, 0);
                             UI1.scv.dismiss();
                             setup = false;
@@ -331,23 +333,23 @@ public class UI {
                     public boolean onLongClick(View view1) {
                         TGUIs.dismiss();
                         TGtext(context, context1);
-                        if (pvp == true) {
+                        if (pvp) {
                             UI1.scv.dismiss();
                             pvp = false;
                         }
-                        if (move == true) {
+                        if (move) {
                             UI1.scv.dismiss();
                             move = false;
                         }
-                        if (world == true) {
+                        if (world) {
                             UI1.scv.dismiss();
                             world = false;
                         }
-                        if (player == true) {
+                        if (player) {
                             UI1.scv.dismiss();
                             player = false;
                         }
-                        if (setup == true) {
+                        if (setup) {
                             UI1.scv.dismiss();
                             setup = false;
                         }

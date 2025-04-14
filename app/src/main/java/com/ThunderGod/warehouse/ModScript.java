@@ -1,15 +1,12 @@
 package com.ThunderGod.warehouse;
 
-import com.ThunderGod.warehouse.*;
-import com.ThunderGod.warehouse.UI.*;
-
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.PopupWindow;
-import android.content.Context;
 import android.app.Activity;
-import android.util.DisplayMetrics;
-import android.widget.Toast;
+import android.content.Context;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+
+import com.ThunderGod.warehouse.UI.SetUP;
 
 public class ModScript {
     /*颜色值RGB*/
@@ -96,11 +93,11 @@ public class ModScript {
     }
 
     public static int W(Context context) {
-        return (int) (context.getResources().getDisplayMetrics().widthPixels);
+        return context.getResources().getDisplayMetrics().widthPixels;
     }
 
     public static int H(Context context) {
-        return (int) (context.getResources().getDisplayMetrics().heightPixels);
+        return context.getResources().getDisplayMetrics().heightPixels;
     }
 
 
